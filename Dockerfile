@@ -3,6 +3,16 @@
 # FROM image_name:latest
 FROM python:3.14.2-slim
 
+WORKDIR /app
+
+# COPY local_folder container_folder
+# RUN mkdir -p /static_folder 
+# COPY ./static_html /static_folder
+# RUN echo "hello" > index.html
+
+# same destination is /app
+COPY ./static_html .
+
 # docker build -f Dockerfile -t pyapp .
 # docker run -it pyapp 
 
