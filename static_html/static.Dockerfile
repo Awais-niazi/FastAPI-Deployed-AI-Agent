@@ -11,7 +11,7 @@ WORKDIR /app
 # RUN echo "hello" > index.html
 
 # same destination is /app
-COPY ./static_html .
+COPY ./src .
 
 # docker build -f Dockerfile -t pyapp .
 # docker run -it pyapp 
