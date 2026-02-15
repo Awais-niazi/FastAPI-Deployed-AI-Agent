@@ -5,7 +5,7 @@ services: # docker compose expects
      dockerfile: Dockerfile
    ports:
        - 8080:8000        
-   command: uvicorn main:app --host 0.0.0.0 --port 8000
+   command: uvicorn main:app --host 0.0.0.0 --port 8000 
    volumes:
      - ./backend/src:/app
    develop:
@@ -16,6 +16,7 @@ services: # docker compose expects
          path: backend/Dockerfile
        - action: restart
          path: backend/src/
+         target: /app
 
   static_html: # custom key name
    # image: python:3.14.2-slim
